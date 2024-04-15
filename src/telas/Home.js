@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image} from 'react-native';
-import {createUserWithEmailAndPassword } from "firebase/auth";
 
 
-const PlaceholderImage = require('../component/image/soldado.png');
+
+const PlaceholderImage = require('../component/image/escola1.png');
 
 const Home = () => {
   const [nomeUsuario, setNomeUsuario] = useState('');
@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <View style={styles.container}>
             <Image source={PlaceholderImage} style={styles.image} />
-            <Text style={styles.titulo}>Home</Text>
+            <Text style={styles.titulo}>Olá Aluno</Text>
       <TextInput
         style={styles.input}
         placeholder="Nome Aluno"
@@ -66,31 +66,31 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: 'lightblue',
     gap:10,
   },
   image: {
-    width:'80%',
+    width:'40%',
     height:100,
-    resizeMode:"contain",
+    resizeMode:"cover",
   
   },
   titulo: {
-    fontSize: 40,
+    fontSize: 30,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 10,
   },
   input: {
     width: '80%',
-    height: 60,
-    borderWidth: 1,
-    borderColor: '#cccccc',
-    borderRadius: 5,
+    height: 50,
+    borderWidth: 2,
+    borderColor: 'black',
+    borderRadius: 12,
     marginBottom: 10,
     paddingHorizontal: 10,
   },
   botao: {
-    backgroundColor: 'orange',
+    backgroundColor: 'indigo',
     width: '75%',
     height: 50,
     justifyContent: 'center',

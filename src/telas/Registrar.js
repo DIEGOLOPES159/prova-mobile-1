@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image} from 'react-native';
-import {createUserWithEmailAndPassword } from "firebase/auth";
 
-const PlaceholderImage = require('../component/image/usuario.png');
 
+const PlaceholderImage = require('../component/image/login.png');
 const Registrar = () => {
   const [nomeUsuario, setNomeUsuario] = useState('');
   const [senha, setSenha] = useState('');
@@ -15,7 +14,7 @@ const Registrar = () => {
 
   return (
     <View style={styles.container}>    
-      <Text style={styles.titulo}>Registrar</Text>
+      <Text style={styles.titulo}>Novo registro</Text>
       <TextInput
         style={styles.input}
         placeholder="Nome de Usuário"
@@ -49,7 +48,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: 'white',
     gap:10,
   },
   image: {
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '80%',
-    height: 60,
+    height: 55,
     borderWidth: 1,
     borderColor: '#cccccc',
     borderRadius: 5,
@@ -73,17 +72,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   botao: {
-    backgroundColor: 'orange',
+    backgroundColor: 'blue',
     width: '75%',
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 15,
     marginTop: 10,
   },
   textoBotao: {
     color: '#ffffff',
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: 'bold',
   },
 });

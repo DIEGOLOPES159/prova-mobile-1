@@ -3,7 +3,8 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image} from 'react
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 
-const PlaceholderImage = require('../component/image/usuario.png');
+const PlaceholderImage = require('../component/image/logo.png');
+
 
 const Login = () => {
   const [nomeUsuario, setNomeUsuario] = useState('');
@@ -19,7 +20,7 @@ const Login = () => {
   return (
     <View style={styles.container}>
             <Image source={PlaceholderImage} style={styles.image} />
-            <Text style={styles.titulo}>Login</Text>
+            <Text style={styles.titulo}>Bem-vindo</Text>
       <TextInput
         style={styles.input}
         placeholder="Nome de Usuário"
@@ -34,7 +35,7 @@ const Login = () => {
         secureTextEntry={true}
       />
       <TouchableOpacity style={styles.botao} onPress={onLoginClick}>
-        <Text style={styles.textoBotao}>Entrar</Text>
+        <Text style={styles.textoBotao}>Fazer login</Text>
       </TouchableOpacity>
     </View>
 
@@ -47,40 +48,40 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
-    gap:10,
+    backgroundColor: 'lightblue',
+    gap:20,
   },
   image: {
-    width:'80%',
-    height:100,
+    width:'100%',
+    height:170,
     resizeMode:"contain",
   
   },
   titulo: {
-    fontSize: 40,
+    fontSize: 30,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 10,
   },
   input: {
     width: '80%',
-    height: 60,
+    height: 50,
     borderWidth: 1,
-    borderColor: '#cccccc',
-    borderRadius: 5,
+    borderColor: 'black',
+    borderRadius: 20,
     marginBottom: 10,
-    paddingHorizontal: 10,
+    paddingHorizontal: 20,
   },
   botao: {
-    backgroundColor: 'orange',
+    backgroundColor: 'green',
     width: '75%',
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 15,
     marginTop: 10,
   },
   textoBotao: {
-    color: '#ffffff',
+    color: 'lightgreen',
     fontSize: 16,
     fontWeight: 'bold',
   },
